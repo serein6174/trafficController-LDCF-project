@@ -1,0 +1,158 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Jun 24 09:50:07 2025
+| Host         : LAPTOP-PE6S5DGH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7k160t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    80 |
+|    Minimum number of control sets                        |    80 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   391 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    80 |
+| >= 0 to < 4        |    52 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    16 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              77 |           31 |
+| No           | No                    | Yes                    |             239 |           93 |
+| No           | Yes                   | No                     |              43 |           28 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             354 |          139 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+--------------------------+-----------------------------+------------------+----------------+--------------+
+|   Clock Signal   |       Enable Signal      |       Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+--------------------------+-----------------------------+------------------+----------------+--------------+
+|  cc/rst_16       |                          | cc/rst_17                   |                1 |              1 |         1.00 |
+|  cc/rst_17       |                          | cc/rst_16                   |                1 |              1 |         1.00 |
+|  cc/rst_21       |                          | cc/rst_30                   |                1 |              1 |         1.00 |
+|  cc/rst_26       |                          | cc/rst_2                    |                1 |              1 |         1.00 |
+|  t4/clk_1hz      | t4/prev_level_reg[1]_P_0 | cc/rst_26                   |                1 |              1 |         1.00 |
+|  cc/rst_10       |                          | cc/rst_11                   |                1 |              1 |         1.00 |
+|  cc/rst_4        |                          | cc/rst_5                    |                1 |              1 |         1.00 |
+|  cc/rst_5        |                          | cc/rst_4                    |                1 |              1 |         1.00 |
+|  t1/clk_1hz      |                          | cc/rst                      |                1 |              1 |         1.00 |
+|  t1/clk_1hz      |                          | cc/rst_27                   |                1 |              1 |         1.00 |
+|  cc/rst_3        |                          | cc/rst_27                   |                1 |              1 |         1.00 |
+|  t1/clk_1hz      | t1/prev_level_reg[1]_P_0 | cc/rst_8                    |                1 |              1 |         1.00 |
+|  t1/clk_1hz      | t1/prev_level_reg[1]_P_0 | cc/rst_3                    |                1 |              1 |         1.00 |
+|  t2/clk_1hz      |                          | cc/rst_0                    |                1 |              1 |         1.00 |
+|  t2/clk_1hz      |                          | cc/rst_28                   |                1 |              1 |         1.00 |
+|  t3/clk_1hz      | t3/prev_level_reg[1]_P_0 | cc/rst_15                   |                1 |              1 |         1.00 |
+|  t2/clk_1hz      | t2/prev_level_reg[1]_P_0 | cc/rst_9                    |                1 |              1 |         1.00 |
+|  t2/clk_1hz      | t2/prev_level_reg[1]_P_0 | cc/rst_14                   |                1 |              1 |         1.00 |
+|  t3/clk_1hz      |                          | cc/rst_1                    |                1 |              1 |         1.00 |
+|  t3/clk_1hz      |                          | cc/rst_29                   |                1 |              1 |         1.00 |
+|  t3/clk_1hz      | t3/prev_level_reg[1]_P_0 | cc/rst_20                   |                1 |              1 |         1.00 |
+|  t4/clk_1hz      |                          | cc/rst_2                    |                1 |              1 |         1.00 |
+|  t4/clk_1hz      |                          | cc/rst_30                   |                1 |              1 |         1.00 |
+|  t4/clk_1hz      | t4/prev_level_reg[1]_P_0 | cc/rst_21                   |                1 |              1 |         1.00 |
+|  cc/rst_22       |                          | cc/rst_23                   |                1 |              1 |         1.00 |
+|  cc/rst_15       |                          | cc/rst_29                   |                1 |              1 |         1.00 |
+|  cc/rst_7        |                          | cc/rst_6                    |                1 |              1 |         1.00 |
+|  cc/rst_23       |                          | cc/rst_22                   |                1 |              1 |         1.00 |
+|  cc/rst_8        |                          | cc/rst                      |                1 |              1 |         1.00 |
+|  cc/rst_9        |                          | cc/rst_28                   |                1 |              1 |         1.00 |
+|  cc/rst_13       |                          | cc/rst_12                   |                1 |              1 |         1.00 |
+|  cc/rst_19       |                          | cc/rst_18                   |                1 |              1 |         1.00 |
+|  cc/rst_20       |                          | cc/rst_1                    |                1 |              1 |         1.00 |
+|  cc/rst_25       |                          | cc/rst_24                   |                1 |              1 |         1.00 |
+|  cc/rst_11       |                          | cc/rst_10                   |                1 |              1 |         1.00 |
+|  cc/rst_14       |                          | cc/rst_0                    |                1 |              1 |         1.00 |
+|  t3/clk_1hz      |                          | cc/rst_16                   |                1 |              2 |         2.00 |
+|  t3/clk_1hz      |                          | cc/rst_19                   |                1 |              2 |         2.00 |
+|  t2/clk_1hz      |                          | cc/rst_10                   |                1 |              2 |         2.00 |
+|  t1/clk_1hz      |                          | cc/rst_5                    |                1 |              2 |         2.00 |
+|  t1/clk_1hz      |                          | cc/rst_7                    |                1 |              2 |         2.00 |
+|  t3/clk_1hz      |                          | cc/rst_17                   |                1 |              2 |         2.00 |
+|  t3/clk_1hz      |                          | cc/rst_18                   |                1 |              2 |         2.00 |
+|  t2/clk_1hz      |                          | cc/rst_12                   |                1 |              2 |         2.00 |
+|  t4/clk_1hz      |                          | cc/rst_24                   |                1 |              2 |         2.00 |
+|  t2/clk_1hz      |                          | cc/rst_13                   |                1 |              2 |         2.00 |
+|  t4/clk_1hz      |                          | cc/rst_22                   |                1 |              2 |         2.00 |
+|  t4/clk_1hz      |                          | cc/rst_23                   |                1 |              2 |         2.00 |
+|  t4/clk_1hz      |                          | cc/rst_25                   |                1 |              2 |         2.00 |
+|  t1/clk_1hz      |                          | cc/rst_6                    |                1 |              2 |         2.00 |
+|  t2/clk_1hz      |                          | cc/rst_11                   |                1 |              2 |         2.00 |
+|  t1/clk_1hz      |                          | cc/rst_4                    |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG   |                          |                             |                2 |              4 |         2.00 |
+|  t3/clk_1hz      |                          | rst_IBUF                    |                3 |              5 |         1.67 |
+|  t2/clk_1hz      |                          | rst_IBUF                    |                4 |              5 |         1.25 |
+|  t1/clk_1hz      |                          | rst_IBUF                    |                3 |              5 |         1.67 |
+|  t4/clk_1hz      |                          | rst_IBUF                    |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG   | cc/cnt9[7]_i_1_n_0       | rst_IBUF                    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | cc/cnt12[7]_i_1_n_0      | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt11[7]_i_1_n_0      | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt14[7]_i_1_n_0      | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt13[7]_i_1_n_0      | rst_IBUF                    |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | cc/cnt16[7]_i_1_n_0      | rst_IBUF                    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | cc/cnt17[7]_i_1_n_0      | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt19[7]_i_1_n_0      | rst_IBUF                    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG   | cc/cnt1[7]_i_1_n_0       | rst_IBUF                    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG   | cc/cnt22[7]_i_1_n_0      | rst_IBUF                    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | cc/cnt7[7]_i_1_n_0       | rst_IBUF                    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | cc/cnt24[7]_i_1_n_0      | rst_IBUF                    |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG   | cc/cnt5[7]_i_1_n_0       | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt4[7]_i_1_n_0       | rst_IBUF                    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG   | cc/cnt6[7]_i_1_n_0       | rst_IBUF                    |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG   | cc/cnt18[7]_i_1_n_0      | rst_IBUF                    |                3 |              8 |         2.67 |
+|  div_res_BUFG[1] |                          | vga_inst/h_count[9]_i_1_n_0 |                2 |             10 |         5.00 |
+|  div_res_BUFG[1] | vga_inst/v_count         | rst_IBUF                    |                3 |             10 |         3.33 |
+|  div_res_BUFG[1] |                          | vga_inst/rdn_reg_n_0        |                5 |             11 |         2.20 |
+|  div_res_BUFG[1] |                          |                             |               29 |             73 |         2.52 |
+|  clk_IBUF_BUFG   | cc/clk_1                 | rst_IBUF                    |               34 |             80 |         2.35 |
+|  clk_IBUF_BUFG   | cc/clk_2                 | rst_IBUF                    |               34 |            128 |         3.76 |
+|  clk_IBUF_BUFG   |                          | rst_IBUF                    |               57 |            181 |         3.18 |
++------------------+--------------------------+-----------------------------+------------------+----------------+--------------+
+
+
